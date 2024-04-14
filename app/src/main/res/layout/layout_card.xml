@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="12dp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingVertical="20dp"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine"
+            android:layout_width="wrap_content"
+            app:layout_constraintGuide_percent="0.3"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/profileImg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/txtFirstName"
+            android:layout_width="wrap_content"
+            android:enabled="false"
+            app:layout_constraintTop_toTopOf="@id/profileImg"
+            app:layout_constraintStart_toStartOf="@id/guideLine"
+            app:layout_constraintBottom_toTopOf="@id/txtEmail"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+           android:enabled="false"
+            app:layout_constraintStart_toStartOf="@id/guideLine"
+            app:layout_constraintTop_toBottomOf="@id/txtFirstName"
+            app:layout_constraintBottom_toBottomOf="@id/profileImg"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/imgEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/edit_icon"
+            android:layout_marginEnd="12dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/imgDelete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/icon_delete"
+            android:layout_marginEnd="12dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/imgSave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/icon_save"
+            android:layout_marginEnd="12dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

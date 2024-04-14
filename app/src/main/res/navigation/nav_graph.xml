@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/userListFragment">
+
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.mr.myroom.ui.fragment.UserListFragment"
+        android:label="UserListFragment">
+        <action
+            android:id="@+id/action_userListFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.mr.myroom.ui.fragment.UserDetailFragment"
+        android:label="UserDetailFragment">
+        <argument
+            android:name="userItem"
+            app:argType="com.mr.myroom.model.UsersItem"
+
+            />
+        <action
+            android:id="@+id/action_userDetailFragment_to_userEditFragment"
+            app:destination="@id/userEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userEditFragment"
+        android:name="com.mr.myroom.ui.fragment.UserEditFragment"
+        android:label="UserEditFragment" />
+</navigation>
